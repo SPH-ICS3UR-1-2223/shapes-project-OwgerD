@@ -14,8 +14,8 @@ public class Triangle {
 	
 	public Triangle(double a, double b, double c) {
 		
+
 	}
-	
 	private double findPerimeter() {
 		return 0;
 	}
@@ -25,6 +25,7 @@ public class Triangle {
 	}
 	
 	public void printStats() {
+
 		
 	}
 
@@ -59,6 +60,7 @@ public class Triangle {
 	public double getArea() {
 		return area;
 	}
+	
 	
 	
 }
