@@ -13,7 +13,7 @@ public class Triangle {
 	}
 	
 	public Triangle(double a, double b, double c) {
-		
+		this.sideA=this.sideB=this.sideC=1;
 
 	}
 	private double findPerimeter() {
