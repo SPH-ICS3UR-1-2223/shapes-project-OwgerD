@@ -9,23 +9,31 @@ public class Triangle {
 	
 	//Methods
 	public Triangle() {
-		
+		this.sideA=this.sideB=this.sideC=1;
 	}
 	
 	public Triangle(double a, double b, double c) {
-		this.sideA=this.sideB=this.sideC=1;
-
+		this.sideA=a;
+		this.sideB=b;
+		this.sideC=c;
 	}
 	private double findPerimeter() {
-		return 0;
+		perimeter=sideA+sideB+sideC;
+		return this.perimeter;
 	}
 	
 	private double findArea() {
-		return 0;
+		area=((this.sideA*this.sideB)/2);
+		return this.area;
 	}
 	
 	public void printStats() {
-
+		System.out.println("Triangle");
+		System.out.println("sideA="+this.sideA);
+		System.out.println("sideB="+this.sideB);
+		System.out.println("sideC="+this.sideC);
+		System.out.println("Perimeter="+this.perimeter);
+		System.out.println("Area="+this.area);
 		
 	}
 
@@ -35,6 +43,8 @@ public class Triangle {
 
 	public void setSideA(double sideA) {
 		this.sideA = sideA;
+		this.perimeter=findPerimeter();
+		this.area=findArea();
 	}
 
 	public double getSideB() {
@@ -43,6 +53,8 @@ public class Triangle {
 
 	public void setSideB(double sideB) {
 		this.sideB = sideB;
+		this.perimeter=findPerimeter();
+		this.area=findArea();
 	}
 
 	public double getSideC() {
@@ -51,6 +63,8 @@ public class Triangle {
 
 	public void setSideC(double sideC) {
 		this.sideC = sideC;
+		this.perimeter=findPerimeter();
+		this.area=findArea();
 	}
 
 	public double getPerimeter() {

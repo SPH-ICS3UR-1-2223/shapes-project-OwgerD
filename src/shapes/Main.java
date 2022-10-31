@@ -22,6 +22,34 @@ public class Main {
 			System.out.println("2.Triangle");
 			System.out.println("3.Circle");
 			int choiceMake=in.nextInt();
+			if(choiceMake==1) {
+				System.out.println("Input length:");
+				Rectangle R= new Rectangle();
+				R.setLength(in.nextInt());
+				System.out.println("Input width:");
+				R.setWidth(in.nextInt());
+				R.printStats();
+			}
+			if(choiceMake==2) {
+				System.out.println("Input sideA length:");
+				Triangle R= new Triangle();
+				R.setSideA(in.nextInt());
+				System.out.println("Input sideB length:");
+				R.setSideB(in.nextInt());
+				System.out.println("Input sideC length:");
+				R.setSideC(in.nextInt());
+				R.printStats();
+				
+			}
+			if(choiceMake==3) {
+				Circle C= new Circle();
+				System.out.println("Set radius:");
+				C.setRadius(in.nextInt());
+				C.printStats();
+			}
+			
+			
+			
 			
 		}
 		//decide what shape to print
@@ -51,33 +79,45 @@ public class Main {
 			System.out.println("3.Circle");
 			int choiceEdit=in.nextInt();
 			if(choiceEdit==1) {
-				System.out.println("What would you loike to edit?");
+				System.out.println("What would you like to edit?");
 				System.out.println("1.length");
 				System.out.println("2.width");
 				int choiceRectangleEdit=in.nextInt();
 				if(choiceRectangleEdit==1) {
 					Rectangle T= new Rectangle();
+					System.out.println("Input length:");
 					T.setLength(in.nextInt());
+					T.printStats();
+					continue;
 				}if(choiceRectangleEdit==2) {
-					Rectangle T= new Rectangle();
-					T.setWidth(in.nextInt());
+					System.out.println("Input width:");
+					Rectangle P= new Rectangle();
+					P.setWidth(in.nextInt());
+					P.printStats();
+					continue;
 				}
 			}
 			if(choiceEdit==2) {
-				System.out.println("What would you loike to edit?");
+				System.out.println("What would you like to edit?");
 				System.out.println("1.sideA");
 				System.out.println("2.sideB");
 				System.out.println("3.sideC");
 				int ChoiceTriangleedit=in.nextInt();
 				if (ChoiceTriangleedit==1) {
 					Triangle T= new Triangle();
+					System.out.println("Input sideA length:");
 					T.setSideA(in.nextInt());
+					T.printStats();
 				}if(ChoiceTriangleedit==2) {
 					Triangle T= new Triangle();
+					System.out.println("Input sideB length:");
 					T.setSideB(in.nextInt());
+					T.printStats();
 				}if(ChoiceTriangleedit==3) {
 					Triangle T= new Triangle();
+					System.out.println("Input sideC length:");
 					T.setSideC(in.nextInt());
+					T.printStats();
 				}
 				continue;
 			}
@@ -86,16 +126,17 @@ public class Main {
 				Circle C= new Circle();
 				C.setRadius(in.nextInt());
 				C.printStats();
+				continue;
 			}
 		}
 		continue;
-		}while(choice<3);
+		}while(choice<=3);
 		//if neither conditions are fulfilled, exit the program 
 		if(choice==4) {
 			System.out.println("We hope you have had a good time with our program! Goodbye!");
 			System.exit(0);
 		}else {
-			System.out.println("ERROR, NO VALID OPTION, PROGRAM TERMINATED.");
+			System.out.println("ERROR, NOT VALID OPTION, PROGRAM TERMINATED.");
 			System.exit(0);
 		}
 		

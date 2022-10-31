@@ -11,7 +11,8 @@ public class Rectangle {
 	public Rectangle() {
 		this.length=1;
 		this.width=1;
-		this.area=length*width;
+		this.area=findArea();
+		this.perimeter=findPerimeter();
 	}
 	
 	public Rectangle(double side) {
@@ -26,13 +27,13 @@ public class Rectangle {
 	}
 	
 	private double findPerimeter() {
-		perimeter=length*2+width*2;
-		return 0;
+		this.perimeter=this.length*2+this.width*2;
+		return perimeter;
 	}
 	
 	private double findArea() {
 		area=length*width;
-		return 0;
+		return this.area;
 	}
 	
 	public void printStats() {
@@ -49,7 +50,8 @@ public class Rectangle {
 
 	public void setLength(double length) {
 		this.length = length;
-		this.area=length*width;
+		this.area = findArea();
+		this.perimeter = findPerimeter();
 	}
 
 	public double getWidth() {
@@ -58,7 +60,8 @@ public class Rectangle {
 
 	public void setWidth(double width) {
 		this.width = width;
-		this.area=length*width;
+		this.area = findArea();
+		this.perimeter = findPerimeter();
 	}
 
 	public double getArea() {
