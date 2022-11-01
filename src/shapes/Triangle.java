@@ -24,7 +24,7 @@ public class Triangle {
 	
 	private double findArea() {
 		area=((this.sideA*this.sideB)/2);
-		return this.area;
+		return area;
 	}
 	
 	public void printStats() {
@@ -32,8 +32,8 @@ public class Triangle {
 		System.out.println("sideA="+this.sideA);
 		System.out.println("sideB="+this.sideB);
 		System.out.println("sideC="+this.sideC);
-		System.out.println("Perimeter="+this.perimeter);
-		System.out.println("Area="+this.area);
+		System.out.println("Perimeter="+findPerimeter());
+		System.out.println("Area="+findArea());
 		
 	}
 
